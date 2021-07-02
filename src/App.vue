@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <router-link class="link" to="/">기본</router-link>
+    <router-link class="link" to="/config">콘픽</router-link>
+    <router-link class="link" to="/build">빌드</router-link>
+    <router-link class="link" to="/localization">현지화</router-link>
+    <router-link class="link" to="/file-upload">파일업로드</router-link>
+    <router-link class="link" to="/event">이벤트</router-link>
+    <div class="container">
+      <router-view />
     </div>
-    <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin-top: 128px;
+  padding-left: 128px;
+  padding-right: 128px;
 }
 
-#nav {
-  padding: 30px;
+.divider {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.link:nth-child(1n + 2):before {
+  content: ' | ';
 }
 </style>
